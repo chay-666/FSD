@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<head>
+    <title> Image Sample </title>
+    <body>
+        <h1> Famous Person-Mother Teresa </h1>
+        <p>She is known across the world as 'Mother'. She was born on August 26, 1910, in Skopje, Macedonia, but moved to India when she was 18 years old. She was a non-Indian. After knowing about the sufferings and pains of people in India, she decided to start a mission to serve and help the poor and helpless people.</p><br>
+        <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSY1bOvtOC4VrzqI_xSeUPGhWTR_H8M2sqdlilLJ6hYWwbaXh4Yf6ciQbvW3DJSRKkeHvRNvdjhvqoIay3lPMSy-g" alt="image of mother teresa" width="300" height="300" ><br>
+        To Know More About Mother Teressa:<a href="https://byjus.com/english/mother-teresa-paragraph/#:~:text=She%20is%20known%20across%20the,the%20poor%20and%20helpless%20people." target="Anchor Tag">"Mother Teresa" </a><br>
+    </body>
+</head>
