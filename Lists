@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Lists </title>
+<body>
+	<h1> <ul><li>1-1 SEMESTER</li></ul> </h1>
+	<ol>
+		<li> CE </li>
+		<li> LA&C </li>
+		<li> Chemistry </li>
+		<li> BC&ME </li>
+		<li> IP </li>
+		<li> CE Lab </li>
+		<li> Chemistry Lab </li>
+		<li> IP Lab </li>
+		<li> Engineering Workshop </li>
+		<li> Yoga and Sports </li>
+	</ol>
+    <h1><ul><li>1-2 SEMESTER </li></ul></h1>
+	<ol>
+		<li>DE&VC</li>
+		<li> Engineering Physics </li>
+		<li> BEEE </li>
+		<li> EG </li>
+		<li> Data Structures </li>
+		<li> Physics Lab </li>
+		<li> BEEE Lab </li>
+		<li> Data Structures Lab </li>
+		<li> IT Workshop </li>
+		<li> NSS/NCC </li>
+	</ol>
+</body>
+</head>
+</html>
