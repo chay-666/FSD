@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://blog.iris.nitk.ac.in/wp-content/uploads/2021/04/forms.png">
+    <title>Form</title>
+    <style>
+        div {
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid black;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div>
+   <form action="/action_page.php" target="_blank" method="get">
+    <label for="fname">Enter Your Name:</label><br>
+    <input type="text" id="fname" name="fname"><br>
+    <label for="fnumber,fname">Enter your RegisterNo:</label><br>
+    <input type="number,text" id="fnumber,fname" name="fnumber,fname"><br>
+    <label for="fnumber">Enter MobileNo:</label><br>
+    <input type="number" id="fnumber" name="fnumber"><br>
+    <b><p>Choose Your Studying Year</p></b>
+    <input type="radio" id="1st year" name="studying_year" value="1">
+    <label for="1st year">1</label><br>
+    <input type="radio" id="2nd year" name="studying_year" value="2">
+    <label for="2nd year">2</label><br>
+    <input type="radio" id="3rd year" name="studying_year" value="3">
+    <label for="3rd year">3</label><br>
+    <input type="radio" id="4th year" name="studying_year" value="4">
+    <label for="4th year">4</label><br>
+    <b><p>Choose the current semister:</p></b>
+    <input type="radio" id="1-1" name="studying_sem" value="1-1">
+    <label for="1-1">1-1</label><br>
+    <input type="radio" id="1-2" name="studying_sem" value="1-2">
+    <label for="1-2">1-2</label><br>
+    <input type="radio" id="2-1" name="studying_sem" value="2-1">
+    <label for="2-1">2-1</label><br>
+    <input type="radio" id="2-2" name="studying_sem" value="2-2">
+    <label for="2-2">2-2</label><br>
+    <input type="radio" id="3-1" name="studying_sem" value="3-1">
+    <label for="3-1">3-1</label><br>
+    <input type="radio" id="3-2" name="studying_sem" value="3-2">
+    <label for="3-2">3-2</label><br>
+    <input type="radio" id="4-1" name="studying_sem" value="4-1">
+    <label for="4-1">4-1</label><br>
+    <input type="radio" id="4-2" name="studying_sem" value="4-2">
+    <label for="4-2">4-2</label><br>
+    <label for="fnumber">Enter the year of Graduation:</label><br>
+    <input type="number" id="fnumber" name="fnumber"><br>
+    <b><p>Choose your Branch:</p></b>
+    <input type="radio" id="subject" name="study_branch" value="branch">
+    <label for="branch">CSE</label><br>
+    <input type="radio" id="subject" name="study_branch" value="branch">
+    <label for="branch">CSE-AIML</label><br>
+    <input type="radio" id="subject" name="study_branch" value="branch">
+    <label for="branch">CSD</label><br>
+    <input type="radio" id="subject" name="study_branch" value="branch">
+    <label for="branch">CST</label><br>
+    <input type="radio" id="subject" name="study_branch" value="branch">
+    <label for="branch">IT</label><br>
+    <input type="radio" id="subject" name="study_branch" value="branch">
+    <label for="branch">ECE</label><br>
+    <input type="radio" id="subject" name="study_branch" value="branch">
+    <label for="branch">EEE</label><br>
+    <input type="radio" id="subject" name="study_branch" value="branch">
+    <label for="branch">CIVIL</label><br>
+    <input type="radio" id="subject" name="study_branch" value="branch">
+    <label for="branch">MECH</label><br><input type="radio" id="subject" name="study_branch" value="branch">
+    <label for="branch">AIML</label><br>
+    <label for="college">Choose your college:</label><br>
+    <select id="college" name="college">
+        <option value="Sasi Engineering College">Sasi Engineering College</option>
+        <option value="vasavi engineering college">Vasavi Engineering College</option>
+        <option value="SRKR Engineering College">SRKR Engineering College</option>
+        <option value="Vishnu Engineering College">Vishnu Engineering College</option>
+    </select><br>
+    <input type="submit" value="submit">
+</form>
+</div>
+</body>
+</html>
