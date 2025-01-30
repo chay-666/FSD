@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Time Table</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 15px;
+            text-align: center;
+            border: 1px solid black;
+        }
+        tr:nth-child(even) {
+  background-color: #D6EEEE;
+}
+    </style>
+</head>
+<body>
+    <table>
+        <caption><h1>CSE-Time Table</h1></caption>
+            <tr>
+                <th>Day</th>
+                <th>9:00-9:55</th>
+                <th>9:55-10:50</th>
+                <th>10:50-11:00</th> 
+                <th>11:00-11:55</th>
+                <th>11:55-12:50</th>
+                <th>12:50-1:50</th>
+                <th>1:50-2:45</th>
+                <th>2:45-3:40</th>
+                <th>3:40-4:30</th>
+            </tr>
+            <tr>
+                <td>Monday</td>
+                <td colspan="2">CDC</td>
+                <td></td>
+                <td colspan="2">DBMS/ML Lab</td>
+                <td></td>
+                <td>FSD</td>
+                <td>DBMS</td>
+                <td>P&S</td>
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td>OT</td>
+                <td>ML</td>
+                <td></td>
+                <td>FSD</td>
+                <td>DL&CO</td>
+                <td></td>
+                <td colspan="3">FSD Lab</td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td>P&S</td>
+                <td>ML</td>
+                <td></td>
+                <td>DL&CO</td>
+                <td>DBMS</td>
+                <td></td>
+                <td>OT</td>
+                <td>DT&I</td>
+                <td>DL&CO</td>
+            </tr>
+            <tr>
+                <td>Thursday</td>
+                <td colspan="2">CDC</td>
+                <td></td>
+                <td colspan="2">DBMS/ML Lab</td>
+                <td></td>
+                <td>DBMS</td>
+                <td>ML</td>
+                <td>P&S</td>
+            </tr>
+            <tr>
+                <td>Friday</td>
+                <td>OT</td>
+                <td>ML</td>
+                <td></td>
+                <td>DBMS</td>
+                <td>DL&CO</td>
+                <td></td>
+                <td colspan="3">CDC Lab</td>
+            </tr>
+            <tr>
+                <td>Saturday</td>
+                <td>P&S</td>
+                <td>DBMS</td>
+                <td></td>
+                <td colspan="2">DT&I Lab</td>
+                <td></td>
+                <td>ML</td>
+                <td>SS</td>
+                <td>DL&CO</td>
+            </tr>
+    </table>
+</body>
+</html>
