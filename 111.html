@@ -1,562 +1,98 @@
-1.(a)Write a ExpressJS program to define a route, Handling Routes, Route Parameters, Query Parameters and URL building.
-//code:
-const express = require('express');
-const app = express();
-app.get('/', (req, res) => {
-  res.send('Welcome to the Home Page!');
-});
-app.get('/user/:name', (req, res) => {
-  res.send(`Hello, ${req.params.name}!`);
-});
-app.get('/search', (req, res) => {
-  res.send(`You searched for ${req.query.item} priced at ₹${req.query.price}`);
-});
-app.get('/profile/:username', (req, res) => {
-  res.send(`Profile URL is: /user/${req.params.username}`);
-});
-app.listen(3000, () => {
-  console.log('Server running on http://localhost:3000');
-});
 
-1(b)Write a ReactJS program for sharing data between components.
 
-//code:
-//src.js
-
-import React, { useState } from 'react';
-import Child from './Child';
-
-export default function App() {
-  const [data, setData] = useState("Hello from App");
-  return (
-    <div style={{ textAlign: 'center', marginTop: 50 }}>
-      <h1>Data Sharing Example</h1>
-      <Child info={data} />
-      <button onClick={() => setData("Data Updated!")}>Update Data</button>
-    </div>
-  );
-}
-
-//Child.js
-
-import React from 'react';
-export default function Child({ info }) {
-  return <h2>Child received: {info}</h2>;
-}
-
-2. (a)Write a React JS program to work with props and states.
-
-//App.js
-
-import React, { useState } from 'react';
-import Child from './Child';
-export default function App() {
-  const [name, setName] = useState("Sathwvik");
-  return (
-    <div style={{ textAlign: 'center', marginTop: '50px' }}>
-      <h1>React Props and State Example</h1>
-      <Child user={name} />
-      <button onClick={() => setName("Lavanya")}>Change Name</button>
-    </div>
-  );
-}
-
-//Child.js
-
-import React from 'react';
-export default function Child(props) {
-  return <h2>Hello, {props.user}!</h2>;
-}
-
-2(b)Write a React JS program to add styles (CSS &amp; Sass Styling) and display data.
-
-//App.js
-
-import React from 'react';
-import './App.css';
-import './App.scss';
-export default function App() {
-  const user = { name: "Teja", status: "Nothing" };
-  return (
-    <div className="box">
-      <h1 className="title">User Info</h1>
-      <p className="text">Name: {user.name}</p>
-      <p className="text">Status: {user.status}</p>
-    </div>
-  );
-}
-
-//App.css
-
-.box {
-  text-align: center;
-  margin-top: 50px;
-}
-.title {
-  color: blue;
-}
-
-//App.scss
-
-.text {
-  color: darkgreen;
-  font-weight: bold;
-  &:hover {
-    color: crimson;
-  }
-}
-
-3. (a)Write a ExpressJS program using templating engine.
-
-//App.js
-
-const express = require('express');
-const app = express();
-app.set('view engine', 'ejs');
-app.get('/', (req, res) => {
-  res.render('index', { name: 'Teja', status: 'Nothing' });
-});
-app.listen(3000, () => {
-  console.log('Server running on http://localhost:3000');
-});
-
-//Index.ejs
-
-<!DOCTYPE html>
-<html>
-  <body style="text-align:center; margin-top:50px;">
-    <h1>Hello <%= name %>!</h1>
-    <p>Status: <%= status %></p>
-  </body>
-</html>
-
-your-project/
-│
-├── app.js
-│
-├── views/
-│   └── index.ejs
-│
-├── package.json
-
-3(b) Write a React JS program to render HTML to a web page.
-
-//App.js
-
-import React from 'react';
-export default function App() {
-  const html = "<h2 style='color:blue'>Hello Teja!</h2><p>Status: Nothing</p>";
-  return (
-    <div
-      dangerouslySetInnerHTML={{ __html: html }}
-    />
-  );
-}
-
-//index.js
-
-import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./App";
-ReactDOM.createRoot(
-  document.getElementById("root")
-).render(
-  <App />
-);
-
-//Index.html(in public folder)
-
-<div id="root"></div>
-4.(a) Write a ExpressJS program to show the working of middleware.
-
-const express = require('express');
-const app = express();
-const log = (req, res, next) => {
-  console.log(`${req.method} ${req.url}`);
-  next();
-};
-app.use(log);
-app.get('/', (req, res) => res.send('Home Page'));
-app.get('/about', (req, res) => res.send('About Page'));
-app.listen(3000, () => {
-  console.log('Server running on http://localhost:3000');
-});
-
-4(b) Write a React JS program for responding to events.
-
-import React, { useState } from 'react';
-export default function App() {
-  const [msg, setMsg] = useState('Hello Teja');
-  return (
-    <div style={{ textAlign: 'center', marginTop: 50 }}>
-      <h2>{msg}</h2>
-      <button onClick={() => setMsg('Button Clicked!')}>
-        Click Me
-      </button>
-    </div>
-  );
-}
-
-5.(a) Write a ExpressJS program for user authentication.
-
-Const express = require(‘express’);
-Const app = express();
-
-App.use(express.urlencoded({ extended: true }));
-
-App.get(‘/’, (req, res) => {
-    Res.sendFile(__dirname + ‘/index.html’);
-});
-
-App.post(‘/items’, (req, res) => {
-    Let message;
-    If (req.body.name === ‘teja’ && req.body.password === ‘123’) {
-        Message = ‘Success: <a href=”/”>Go back</a>’;
-    } else {
-        Message = ‘Invalid name or password: <a href=”/”>Try again</a>’;
+import java.util.*;
+class Main {
+    public static void main(String[] a) {
+        Scanner s = new Scanner(System.in);
+        System.out.print("Enter number of instances: ");
+        int n = s.nextInt();
+        Set<String> d = new HashSet<>();
+        for (int i = 1; i <= n; i++) d.add("Instance_" + i);
+        d.forEach(System.out::println);
+        s.close();
     }
-    Res.send(`<html><body><h2>${message}</h2></body></html>`);
-});
-
-App.listen(3000, () => {
-    Console.log(‘Server running on http://localhost:3000’);
-});
-
-//Index.html
-<!DOCTYPE html>
-<html>
-  <body>
-    <form action="/items" method="post">
-      Name: <input type="text" name="name"><br>
-      Password: <input type="password" name="password"><br>
-      <button type="submit">Submit</button>
-    </form>
-  </body>
-</html>
-
-5(b) Write MongoDB queries to perform CRUD operations on document using insert(),
-find(), update(), remove() .
-
-//data base
-use collegeDB
-//collection
-db.createCollection("students")
-//insert
-db.students.insert({
-    name: "Bunny",
-    age: 20,
-    course: "BCA",
-    city: "Hyderabad"
-})
-
-//find
-db.students.find()
-db.students.find({ city: "Hyderabad" })
-
-//update
-db.students.update(
-    { name: "Bunny" },
-    { $set: { city: "Chennai" } }
-)
-
-//remove
-db.students.remove({ name: "Ravi" })
-db.students.remove({})
-
-6(a) Write a ExpressJS program to accept data, retrieve data and delete a specified
-resource using http methods.
-
-Const express = require(‘express’);
-Const app = express();
-
-App.use(express.json());
-App.use(express.urlencoded({ extended: true }));
-
-Let data = [
-    { id: 1, name: ‘teja’ },
-    { id: 2, name: ‘salaar’ }
-];
-
-App.post(‘/items’, (req, res) => {
-    Data.push(req.body);
-    Res.send(‘Data added’);
-});
-
-App.get(‘/items’, (req, res) => {
-    Res.json(data);
-});
-
-App.delete(‘/items/:id’, (req, res) => {
-    Const id = Number(req.params.id);
-    Data = data.filter(item => item.id !== id);
-    Res.send(‘Item deleted’);
-});
-
-App.post(‘/items/delete’, (req, res) => {
-    Const id = Number(req.body.id);
-    Data = data.filter(item => item.id !== id);
-    Res.send(‘Item deleted’);
-});
-
-App.listen(3000, () => {
-    Console.log(‘Server running on http://localhost:3000’);
-});
-
-//Index.html
-<!DOCTYPE html>
-<html>
-<body>
-    <h2>Add Item</h2>
-    <form action=”/items” method=”POST”>
-        <input name=”id” placeholder=”Enter ID”><br><br>
-        <input name=”name” placeholder=”Enter Name”><br><br>
-        <button type=”submit”>Add Item</button>
-    </form>
-    
-    <hr>
-    
-    <h2>Delete Item</h2>
-    <form action=”/items/delete” method=”POST”>
-        <input name=”id” placeholder=”Enter ID to delete”><br><br>
-        <button type=”submit”>Delete Item</button>
-    </form>
-</body>
-</html>
-
-6(b) Write MongoDB queries to Create and drop databases and collections.
-
-//create database
-use myDatabase
-
-//create collection
-db.createCollection("students")
-
-//show
-show dbs
-
-//drop collection
-db.students.drop()
-
-//drop database
-db.dropDatabase()
-
-7(a) Write a React JS program for conditional rendering.
-
-import React, { useState } from "react";
-
-export default function App() {
-  const [loggedIn, setLoggedIn] = useState(false);
-  let message;
-  if (loggedIn) message = "Welcome, Teja!";
-  else message = "Please log in to continue.";
-  return (
-    <div style={{ textAlign: "center", marginTop: 50 }}>
-      <h2>Conditional Rendering</h2>
-      <h3>{message}</h3>
-      <button onClick={() => setLoggedIn(!loggedIn)}>
-        {loggedIn ? "Logout" : "Login"}
-      </button>
-    </div>
-  );
 }
 
-7(b) Write a React JS program for rendering lists.
+import matplotlib.pyplot as plt
+import numpy as np
 
-import React from 'react';
-export default function App() {
-  const names = ['Teja', 'Ravi', 'Nothing'];
-  return (
-    <div style={{ textAlign: 'center', marginTop: 50 }}>
-      <h2>Names List</h2>
-      <ul>
-        {names.map((n, i) => (
-          <li key={i}>{n}</li>
-        ))}
-      </ul>
-    </div>
-  );
-}
+# Sample data
+data = [23, 45, 56, 78, 33, 45, 67, 89, 90, 34]
 
-8.(a) Write a ExpressJS program to work with form data.
+# Histogram
+plt.hist(data, bins=5, color='skyblue')
+plt.title("Histogram")
+plt.show()
 
-const express = require('express');
-const app = express();
-app.use(express.urlencoded({ extended: true }));
-app.get('/', (req, res) => {
-  res.send(`
-    <form action="/submit" method="POST">
-      <input name="name" placeholder="Enter name" /><br><br>
-      <input name="age" placeholder="Enter age" /><br><br>
-      <button type="submit">Submit</button>
-    </form>
-  `);
-});
-app.post('/submit', (req, res) => {
-  res.send(`
-    Form received.<br>
-    Name: ${req.body.name}<br>
-    Age: ${req.body.age}<br><br>
-  `);
-});
-app.listen(3000, () => console.log('http://localhost:3000'));
+# Box Plot
+plt.boxplot(data)
+plt.title("Box Plot")
+plt.show()
 
-8(b) Write a React JS program for writing markup with JSX.
+# Bar Chart
+categories = ['A', 'B', 'C', 'D']
+values = [10, 20, 15, 30]
+plt.bar(categories, values, color='orange')
+plt.title("Bar Chart")
+plt.show()
 
-import React from "react";
-export default function App() {
-  const title = "Welcome to JSX Example";
-  const message = "JSX lets you write HTML-like markup inside JavaScript.";
-  return (
-    <div>
-      <h1>{title}</h1>
-      <p>{message}</p>
-      <div>
-        <h3>Student Info</h3>
-        <p>Name: Bunny</p>
-        <p>Course: React JS</p>
-      </div>
-    </div>
-  );
-}
+# Pie Chart
+plt.pie(values, labels=categories, autopct='%1.1f%%')
+plt.title("Pie Chart")
+plt.show()
 
-9.(a) Write a React JS program for routing to different pages using react router.
 
-//App.js
+from mlxtend.frequent_patterns import apriori, association_rules
+from mlxtend.preprocessing import TransactionEncoder
+import pandas as pd
 
-//9a
+t = [['milk', 'bread'],
+     ['milk', 'butter'],
+     ['bread', 'butter']]
 
-import React from "react";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import Home from "./Home";
-import About from "./About";
-import Contact from "./Contact";
-export default function App() {
-  return (
-    <BrowserRouter>
-      <Link to="/">Home</Link> | 
-      <Link to="/about">About</Link> | 
-      <Link to="/contact">Contact</Link>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-    </BrowserRouter>
-  );
-}
-//Home.js
+d = pd.DataFrame(TransactionEncoder().fit(t).transform(t),
+                 columns=['bread', 'butter', 'milk'])
 
-import React from "react";
-export default function Home() {
-  return <h3>Home Page</h3>;
-}
+f = apriori(d, min_support=0.5, use_colnames=True)
+print(f)
+print(association_rules(f, metric='confidence', min_threshold=0.7))
 
-//About.js
 
-import React from "react";
-export default function About() {
-  return <h3>About Page</h3>;
-}
 
-//Contact.js
+from sklearn.naive_bayes import GaussianNB
 
-import React from "react";
-export default function Contact() {
-  return <h3>Contact Page</h3>;
-}
+X = [[180, 80], [170, 70], [160, 60], [158, 54], [166, 65]]
+y = [1, 1, 0, 0, 1]
+model = GaussianNB()
+model.fit(X, y)
+test = [[165, 62]]
+predicted = model.predict(test)
+print("Test Data:", test)
+print("Predicted Class (0=Female, 1=Male):", predicted[0])
 
-9(b)Write a React JS program for updating the screen.
 
-import React, { useState } from "react";
-export default function App() {
-  const [count, setCount] = useState(0);
-  return (
-    <div style={{ textAlign: "center", marginTop: 50 }}>
-      <h2>Updating the Screen Example</h2>
-      <h3>Count: {count}</h3>
-      <button onClick={() => setCount(count + 1)}>
-        Increase
-      </button>
-    </div>
-  );
-}
 
-10(a)Write a React JS program for creating and nesting components (function and
-class).
 
-//App.js
+from sklearn.cluster import KMeans
 
-import React from "react";
-import Child from "./Child";
-export default function App() {
-  return (
-    <div>
-      <h2>Parent (Function Component)</h2>
-      <Child />
-    </div>
-  );
-}
+X = [[1, 2], [1, 4], [1, 0], [10, 2], [10, 4], [10, 0]]
+kmeans = KMeans(n_clusters=2, n_init=10)
+kmeans.fit(X)
+print("Cluster centers:", kmeans.cluster_centers_)
+print("Labels:", kmeans.labels_)
 
-//Child.js
 
-import React, { Component } from "react";
+          
+from scipy.stats import chi2_contingency
+data = [[30, 10], [10, 30]]
+# Perform chi-square test of independence
+chi2, p, dof, expected = chi2_contingency(data)
+print("Chi-square:", chi2)
+print("p-value:", p)
+print("Degrees of freedom:", dof)
+print("Expected:\n", expected)
 
-export default class Child extends Component {
-  render() {
-    return <p>Child (Class Component)</p>;
-  }
-}
-
-//index.js
-
-import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./App";
-ReactDOM.createRoot(
-  document.getElementById("root")
-).render(
-  <App />
-);
-
-//index.html
-
-<!DOCTYPE html>
-<html>
-  <body>
-    <div id="root"></div>
-  </body>
-</html>
-
-10(b) Write MongoDB queries to work with records using find(), limit(), sort(),
-createIndex(), aggregate().
-
-//create database
-use college;
-
-//collection
-db.createCollection("students");
-
-//insert
-db.students.insertMany([
-  { name: "Teja", age: 22, course: "React" },
-  { name: "Bunny", age: 21, course: "Node" },
-  { name: "Ravi", age: 23, course: "React" }
-]);
-
-//find
-db.students.find({ course: "React" });
-
-//limit
-db.students.find().limit(2);
-
-//sort
-db.students.find().sort({ age: -1 });
-
-//createindex
-db.students.createIndex({ name: 1 });
-
-//aggregrate
-db.students.aggregate([
-  { $group: { _id: "$course", total: { $sum: 1 } } }
-]);
-
+if p > 0.05:
+    print("\nSince p-value (", round(p, 3), ") > 0.05 → No significant association")
+else:
+    print("\nSince p-value (", round(p, 3), ") ≤ 0.05 → Significant association exists")
